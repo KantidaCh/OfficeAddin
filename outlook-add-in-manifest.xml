@@ -16,8 +16,8 @@
   <ProviderName>k.cha</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
-  <DisplayName DefaultValue="My Office Add-in" />
-  <Description DefaultValue="[Outlook Add-in description]"/>
+  <DisplayName DefaultValue="Attachment Example" />
+  <Description DefaultValue="A mail read add-in sample that gets attachments from a message."/>
 
   <!-- Icon for your add-in. Used on installation screens and the add-ins dialog. -->
   <IconUrl DefaultValue="https://kantidach.github.io/OfficeAddin/assets/icon-32.png" />
@@ -51,7 +51,7 @@
     </Form>
   </FormSettings>
 
-  <Permissions>ReadWriteItem</Permissions>
+  <Permissions>ReadItem</Permissions>
   <Rule xsi:type="RuleCollection" Mode="Or">
     <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
   </Rule>
@@ -113,13 +113,13 @@
         <bt:Url id="messageReadTaskPaneUrl" DefaultValue="https://kantidach.github.io/OfficeAddin/index.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="groupLabel" DefaultValue="My Add-in Group"/>
+        <bt:String id="groupLabel" DefaultValue="Outlook Add-in Sample"/>
         <bt:String id="customTabLabel"  DefaultValue="My Add-in Tab"/>
-        <bt:String id="paneReadButtonLabel" DefaultValue="Display all properties"/>
-        <bt:String id="paneReadSuperTipTitle" DefaultValue="Get all properties"/>
+        <bt:String id="paneReadButtonLabel" DefaultValue="Get Attachments"/>
+        <bt:String id="paneReadSuperTipTitle" DefaultValue="Get attachments from an Exchange mailbox."/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="paneReadSuperTipDescription" DefaultValue="Opens a pane displaying all available properties. This is an example of a button that opens a task pane."/>
+        <bt:String id="paneReadSuperTipDescription" DefaultValue="Your add-in loaded successfully. Click here to get attachments."/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
